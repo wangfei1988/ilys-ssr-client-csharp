@@ -3,6 +3,7 @@
 
 在 .\ilys-ssr-client-csharp\shadowsocks-csharpProgram.cs 里面
 
+```C#
 namespace GlobalVaribles
 {
     // 全局变量申明位置
@@ -19,6 +20,7 @@ namespace GlobalVaribles
         public static string LOGIN_email = "";
     }
 }
+```
 
 配置好sspanel_v3_mod_UIChanges里的数据库信息就能用了。
 
