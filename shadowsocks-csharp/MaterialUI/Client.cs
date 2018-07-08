@@ -28,7 +28,6 @@ namespace MaterialUI
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-
         }
 
         // 单文件变量申明位置
@@ -174,7 +173,7 @@ namespace MaterialUI
         {
             MySqlConnection msqlConnection = new MySqlConnection("Host = " + GlobalVaribles.GlobalVaribles.DB_Adress + "; Database = " + GlobalVaribles.GlobalVaribles.DB_DBName + "; Username = " + GlobalVaribles.GlobalVaribles.DB_Username + "; Password = " + GlobalVaribles.GlobalVaribles.DB_Password + ";SslMode = none;");
             msqlConnection.Open();
-            string sql = "SELECT content FROM announcement";
+            string sql = "SELECT markdown FROM announcement";
             MySqlDataAdapter result = new MySqlDataAdapter(sql, msqlConnection);
             DataSet dataset = new DataSet();
             result.Fill(dataset, "tb");
@@ -183,7 +182,8 @@ namespace MaterialUI
             {
                 for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
                 {
-                    //htmlLabel1.Text = htmlLabel1.Text + dataset.Tables[0].Rows[i][0];
+                     if (i != 0) materialLabel6.Text = materialLabel6.Text + "\n\n";
+                     materialLabel6.Text = materialLabel6.Text + dataset.Tables[0].Rows[i][0];
                 }
             }
         }
@@ -242,7 +242,7 @@ namespace MaterialUI
             延迟加载.Enabled = false;
             RefreshData();
             GetAuthInfo();
-            //GetAnnounce();
+            GetAnnounce();
             RefreshNode();
             RefreshPing();
             if(materialCheckBox2.Checked == true)
@@ -332,7 +332,7 @@ namespace MaterialUI
         {
             RefreshData();
             GetAuthInfo();
-            //GetAnnounce();
+            GetAnnounce();
             RefreshNode();
             RefreshPing();
             if (materialRaisedButton1.Visible == false)
@@ -646,6 +646,11 @@ namespace MaterialUI
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://proxy.g41.moe/");
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.illyasviel.me/");
         }
     }
 }

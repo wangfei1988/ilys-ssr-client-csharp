@@ -19,10 +19,10 @@ namespace GlobalVaribles
     public class GlobalVaribles
     {
         // 数据库配置模块
-        public static string DB_Adress = "104.199.206.28";
+        public static string DB_Adress = "127.0.0.1";
         public static string DB_DBName = "sspanel";
         public static string DB_Username = "sspanel";
-        public static string DB_Password = "jEMJreACfpH2DdNy";
+        public static string DB_Password = "password";
         // 登陆模块
         public static bool LOGIN_ifLogged = false;
         public static string LOGIN_username = "";
@@ -65,6 +65,10 @@ namespace Shadowsocks
                         Environment.ExitCode = 1;
                     }
                     return;
+                }
+                if (arg == "--check")
+                {
+                    MessageBox.Show("ilys-ssr-client","info");
                 }
             }
             using (Mutex mutex = new Mutex(false, "Global\\ShadowsocksR_" + Application.StartupPath.GetHashCode()))

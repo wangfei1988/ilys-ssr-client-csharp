@@ -13,17 +13,17 @@ namespace Shadowsocks.Controller
 {
     public class UpdateChecker
     {
-        private const string UpdateURL = "https://raw.githubusercontent.com/breakwa11/breakwa11.github.io/master/update/ssr-win-4.0.xml";
+        private const string UpdateURL = "https://github.com/Illyasviels/ilys-ssr-client-csharp";
 
         public string LatestVersionNumber;
         public string LatestVersionURL;
         public event EventHandler NewVersionFound;
 
-        public const string Name = "ShadowsocksR";
-        public const string Copyright = "Copyright © BreakWa11 2017. Fork from Shadowsocks by clowwindy";
-        public const string Version = "4.7.0";
+        public const string Name = "ilys_ssr_client";
+        public const string Copyright = "Copyright © BreakWa11 2017. Remake by illyasviel.";
+        public const string Version = "1.0.0";
 #if !_DOTNET_4_0
-        public const string NetVer = "2.0";
+        public const string NetVer = "4.6.1";
 #elif !_CONSOLE
         public const string NetVer = "4.0";
 #else
