@@ -1,7 +1,7 @@
-# ilys-ssr-client-csharp
+# ILYS SSR Client
 配合sspanelv3mod的一个SSR电脑端的客户端（C#）
 
-在 .\ilys-ssr-client-csharp\shadowsocks-csharpProgram.cs 里面
+在 .\ilys-ssr-client-csharp\shadowsocks-csharp\Program.cs 里面
 
 ```C#
 namespace GlobalVaribles
