@@ -19,10 +19,10 @@ namespace GlobalVaribles
     public class GlobalVaribles
     {
         // 数据库配置模块
-        public static string DB_Adress = "127.0.0.1";
+        public static string DB_Adress = "ip";
         public static string DB_DBName = "sspanel";
         public static string DB_Username = "sspanel";
-        public static string DB_Password = "password";
+        public static string DB_Password = "pass";
         // 登陆模块
         public static bool LOGIN_ifLogged = false;
         public static string LOGIN_username = "";

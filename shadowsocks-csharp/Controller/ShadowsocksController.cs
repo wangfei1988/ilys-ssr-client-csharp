@@ -374,9 +374,9 @@ namespace Shadowsocks.Controller
             _config.FlushPortMapCache();
             ReloadIPRange();
 
-            HostMap hostMap = new HostMap();
-            hostMap.LoadHostFile();
-            HostMap.Instance().Clear(hostMap);
+            //HostMap hostMap = new HostMap();
+            //hostMap.LoadHostFile();
+            //HostMap.Instance().Clear(hostMap);
 
 #if !_CONSOLE
             if (polipoRunner == null)
@@ -417,7 +417,7 @@ namespace Shadowsocks.Controller
                             polipoRunner.Stop();
                             polipoRunner.Start(_config);
 
-                            _listener.GetServices()[3] = new HttpPortForwarder(polipoRunner.RunningPort, _config);
+                            //_listener.GetServices()[3] = new HttpPortForwarder(polipoRunner.RunningPort, _config);
                         }
 #endif
                     }

@@ -217,7 +217,7 @@ namespace MaterialUI
                     ListViewItem lvi = new ListViewItem();
                     lvi.Text = dataset.Tables[0].Rows[i][1].ToString().Split(' ')[0]; //0是国家
                     lvi.SubItems.Add(dataset.Tables[0].Rows[i][1].ToString().Split(' ')[1]); //1服务器名称
-                    lvi.SubItems.Add("999"); //2延迟
+                    lvi.SubItems.Add("9999"); //2延迟
                     lvi.SubItems.Add(dataset.Tables[0].Rows[i][2].ToString()); //3连接地址
                     this.materialListView1.Items.Add(lvi);
                 }
@@ -251,7 +251,7 @@ namespace MaterialUI
                 {
                     string ip = "";
                     string name = "";
-                    int min = 999;
+                    int min = 9999;
                     foreach (ListViewItem lt in materialListView1.Items)
                     {
                         if(int.Parse(lt.SubItems[2].Text) < min)
@@ -261,7 +261,7 @@ namespace MaterialUI
                             min = int.Parse(lt.SubItems[2].Text);
                         }
                     }
-                    if (min != 999)
+                    if (min != 9999)
                     {
                         if (PageVaribles.STATS_transfer_all - PageVaribles.STATS_transfer_used < 0)
                         {
@@ -315,7 +315,7 @@ namespace MaterialUI
             options.DontFragment = true;
             string data = "ping test data";
             byte[] buf = Encoding.ASCII.GetBytes(data);
-            PingReply reply = pingSender.Send(adress, 999, buf, options);
+            PingReply reply = pingSender.Send(adress, 9999, buf, options);
             int time = 0;
             while (time < 3)
             {
@@ -325,7 +325,7 @@ namespace MaterialUI
                 }
                 time++;
             }
-            return 999;
+            return 9999;
         }
 
         private void Refresh_Tick(object sender, EventArgs e)
@@ -445,7 +445,7 @@ namespace MaterialUI
             }
             if (this.materialListView1.SelectedItems.Count > 0)
             {
-                if (GetMiddleString(this.materialListView1.SelectedItems[0].SubItems[2].ToString(), "{", "}") == "999")
+                if (GetMiddleString(this.materialListView1.SelectedItems[0].SubItems[2].ToString(), "{", "}") == "9999")
                 {
                     MessageBox.Show("该节点目前无法正常访问，请更换一个！", "提示");
                     return;
