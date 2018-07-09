@@ -26,4 +26,3 @@ namespace GlobalVaribles
 
 TIP:
 等级过期时间为1987年（默认不过期的）会在软件内提示账户已过期。（一般是管理员账户）
->>>>>>> 57b6dfef80cd56701b766a87b38296f3c1cf9b28
